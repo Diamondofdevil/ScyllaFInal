@@ -1,0 +1,170 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.Common;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace DatabaseBrowser
+{
+    public partial class MainForm : Form
+    {
+        string dbType = "";
+        string dbIp = "";
+        string dbName = "";
+        private DBManager dbManager;
+        public MainForm()
+        {
+            InitializeComponent();
+            string conStr = "server=someServer;Password=someShit;User ID=sa";
+            SqlConnection con = new SqlConnection(conStr);
+            SqlCommand comm = null;
+            dbManager = DBManager.createInstance(comm, con, DBManager.DB_TYPE.MSSQL);
+            loadDB();
+        }
+        public MainForm(DbCommand comm, DbConnection con, DBManager.DB_TYPE type)
+        {
+            dbManager = DBManager.createInstance(comm, con, type);
+        }
+        private void loadDB()
+        {
+            dbName = dbManager.getActualDB();
+            if (dbName == null)
+            {
+                infoStripLabel.Text = dbManager.LastError;
+                return;
+            }
+            this.Text = string.Concat("Scylla Database Browser", " - ", dbType,dbIp,dbName);
+            
+            // Fill tree with database name and table names
+            treeView1.BeginUpdate();
+            treeView1.Nodes.Clear();
+            TreeNode main = treeView1.Nodes.Add("Database", dbName,0,0);
+            
+            List<string> tableNames = dbManager.getDBNames();
+            if (tableNames == null)
+            {
+                infoStripLabel.Text = dbManager.LastError;
+                return;
+            }
+            foreach (string tableName in tableNames) main.Nodes.Add(tableName, tableName, 1, 1);
+            main.Expand();
+            treeView1.EndUpdate();
+            treeView1.SelectedNode = treeView1.Nodes[0];
+        } 
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            dataGrid.SuspendLayout();
+            if (e.Node.Level == 0)
+            {
+                //TODO: Give some info of the db
+            }
+            else
+            {
+
+                setResultSet(dbManager.getTableData(e.Node.Text),dbManager.isDataUpdate(e.Node.Text), dbManager.isTableUpdate(e.Node.Text));
+            }
+            dataGrid.ResumeLayout();
+        }
+
+        private void setResultSet(DbDataReader dr, bool data, bool tables)
+        {
+            dataGrid.Columns.Clear();
+            if (dr == null)
+            {
+                return;
+            }
+            if (dr.FieldCount == 0)
+            {
+                dr.Close();
+                if(tables)
+                    loadDB();
+                if (data)
+                {
+                    TreeNode node = treeView1.SelectedNode;  // Update data view
+                    treeView1.SelectedNode = null;
+                    treeView1.SelectedNode = node;
+                }
+                return;
+            }
+            DataTable schemaTable = dr.GetSchemaTable();
+            DataTable dataTable = new DataTable();
+
+            for (int i = 0; i < schemaTable.Rows.Count; i++)
+            {
+
+                DataGridViewTextBoxColumn tbc = new DataGridViewTextBoxColumn();
+                DataRow dataRow = schemaTable.Rows[i];
+                string columnName = dataRow["ColumnName"].ToString();
+                tbc.HeaderText = columnName;
+                dataGrid.Columns.Add(tbc);
+            }
+            while (dr.Read())
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                for (int i = 0; i < dr.FieldCount; i++)
+                {
+                    DataGridViewTextBoxCell tbc = new DataGridViewTextBoxCell();
+                    tbc.Value = dr.GetValue(i);
+                    row.Cells.Add(tbc);
+                }
+                dataGrid.Rows.Add(row);
+            }
+            dr.Close();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            DateTime initTime = DateTime.Now;
+
+            setResultSet(dbManager.execute(richTextBox1.Text.Trim()),dbManager.isDataUpdate(richTextBox1.Text.Trim()), dbManager.isTableUpdate(richTextBox1.Text.Trim()));
+
+            infoStripLabel.Text = string.IsNullOrEmpty(dbManager.LastError) ? "Total time taken: " + ((long)(DateTime.Now - initTime).TotalMilliseconds).ToString() : dbManager.LastError;
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            if (sfd.ShowDialog() != System.Windows.Forms.DialogResult.OK)
+            {
+                return;
+            }
+            StreamWriter sw = new StreamWriter(sfd.FileName);
+            sw.WriteLine("#Generated by Scylla");
+            sw.WriteLine(richTextBox1.Text);
+            StringBuilder line = new StringBuilder();
+            foreach (DataGridViewColumn col in dataGrid.Columns)
+            {
+                line.Append(col.HeaderText + ",");
+            }
+            line.Length -= 1;
+            sw.WriteLine(line);
+            line.Length = 0;
+            foreach (DataGridViewRow row in dataGrid.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    line.Append(cell.Value.ToString() + ",");
+                }
+
+                line.Length -= 1;
+                sw.WriteLine(line);
+                line.Length = 0;
+            }
+            sw.Close();
+            infoStripLabel.Text = "CSV export done";
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F5 && richTextBox1.Focused)
+                toolStripButton1.PerformClick();
+        }
+    }
+}

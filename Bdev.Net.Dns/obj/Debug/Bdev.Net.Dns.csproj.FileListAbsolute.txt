@@ -1,0 +1,5 @@
+D:\Scylla\Scylla\Bdev.Net.Dns\bin\Debug\Bdev.Net.Dns.dll
+D:\Scylla\Scylla\Bdev.Net.Dns\bin\Debug\Bdev.Net.Dns.pdb
+D:\Scylla\Scylla\Bdev.Net.Dns\obj\Debug\Bdev.Net.Dns.dll
+D:\Scylla\Scylla\Bdev.Net.Dns\obj\Debug\Bdev.Net.Dns.pdb
+D:\Scylla\Scylla\Bdev.Net.Dns\obj\Debug\Bdev.Net.Dns.csprojResolveAssemblyReference.cache

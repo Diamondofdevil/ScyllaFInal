@@ -1,0 +1,129 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly HackSMB, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Struct HackSMB.events_: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 iID : Public
+    System.DateTime dtTimeGen : Public
+    System.DateTime dtTimeWritten : Public
+    System.String strType : Public
+    System.String strSourceName : Public
+    System.String strComputerName : Public
+Class HackSMB.groups_: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Fields:
+    System.Collections.Generic.List`1[System.String] plstUsers : Public
+    System.String strName : Public
+    System.String strComment : Public
+    System.String strGUID : Public
+Struct HackSMB.user_: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.String strName : Public
+    System.String strComment : Public
+    System.Collections.Generic.List`1[System.String] plstFlags : Public
+    System.Collections.Generic.List`1[System.String] plstGroups : Public
+    System.String strFull_Name : Public
+    System.String strLonguid : Public
+    Int32 iUser_ID : Public
+Struct HackSMB.transport_: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.String strAddress : Public
+    System.String strDomain : Public
+    System.String strNetAddress : Public
+Struct HackSMB.OS_: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 iMinor : Public
+    Int32 iMajor : Public
+    System.String strType : Public
+    System.String strComment : Public
+    System.String strADName : Public
+    System.String strADOrg : Public
+    System.String strADProcessor : Public
+    Int32 iADProcCount : Public
+    System.String strADguid : Public
+    System.String strADOwner : Public
+Struct HackSMB.History_: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 iMinLen : Public
+    Int32 iMaxAge : Public
+    Int32 iMinAge : Public
+    Int32 iForceLogOff : Public
+    Int32 iPassHistLen : Public
+    Int32 iAttempts : Public
+    Int32 iTimeBetweenFail : Public
+    Int32 iLockDuration : Public
+Struct HackSMB.NetBIOS_: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.String strName : Public
+    System.String strType : Public
+    System.String strHost : Public
+    System.String strComment : Public
+Struct HackSMB.Service_: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.String strDisplayName : Public
+    System.String strServiceName : Public
+    System.String strStatus : Public
+Struct HackSMB.Session_: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.String strConnection_Machine_Name : Public
+    System.String strUsername : Public
+    Int32 iSecIdle : Public
+    Int32 iSecConnected : Public
+Struct HackSMB.NetDev_: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    System.String strAddress : Public
+    System.String strDomain : Public
+    System.String strNetAddress : Public
+    System.String strName : Public
+Class HackSMB.WinInfo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Fields:
+    System.Collections.Generic.List`1[HackSMB.user_] plstUsers : Public
+    System.Collections.Generic.List`1[System.String] plstDisks : Public
+    System.Collections.Generic.List`1[HackSMB.events_] plstEventLog : Public
+    System.Collections.Generic.List`1[HackSMB.groups_] plstGroups : Public
+    HackSMB.OS_ os : Public
+    HackSMB.History_ history : Public
+    System.Collections.Generic.List`1[HackSMB.NetBIOS_] plstNbs : Public
+    System.Collections.Generic.List`1[HackSMB.Service_] plstServ : Public
+    System.Collections.Generic.List`1[HackSMB.Session_] plstSession : Public
+    System.DateTime dtDate : Public
+    System.Collections.Generic.List`1[HackSMB.NetDev_] plstDevs : Public
+Class HackSMB.CWfpNET: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String, System.String, Boolean): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Disks_get(WinInfo): PrivateScope, Public
+    EventLog_get(WinInfo): PrivateScope, Public
+    GroupMembers_get(Char*, groups_, Int32): PrivateScope, Public
+    IPC_Session_Connect(): PrivateScope, Public
+    IPC_Session_Disconnect(): PrivateScope, Public
+    LocalGroups_get(user_&): PrivateScope, Public
+    OperatingSystem_get(WinInfo): PrivateScope, Public
+    PasswordPolicy_get(WinInfo): PrivateScope, Public
+    NetBIOSShares_get(WinInfo): PrivateScope, Public
+    Services_get(WinInfo): PrivateScope, Public
+    Groups_get(user_&): PrivateScope, Public
+    Sessions_get(WinInfo): PrivateScope, Public
+    Time_get(WinInfo): PrivateScope, Public
+    Transports_get(WinInfo): PrivateScope, Public
+    Users_get(WinInfo, Int32*, Int32): PrivateScope, Public
+    ADGroups_get(WinInfo): PrivateScope, Public
+    ADOperatingSystem_get(WinInfo): PrivateScope, Public
+    ADNetBIOSShares_get(WinInfo): PrivateScope, Public
+    ADServices_get(WinInfo): PrivateScope, Public, Virtual, VtableLayoutMask
+    ADSessions_get(WinInfo): PrivateScope, Public
+    ADUsers_get(WinInfo): PrivateScope, Public
+    {dtor}(): PrivateScope, Public

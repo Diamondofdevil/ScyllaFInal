@@ -1,0 +1,79 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly OpenSSL_Wrapper, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Struct OpenSSL_Wrapper.CeriticateInfo: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus PolStatus : Public
+    Byte[] CertData : Public
+Class OpenSSL_Wrapper.NewCertificate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(OpenSSL): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(OpenSSL, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class OpenSSL_Wrapper.OpenSSL: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Properties:
+    Int32 MaxDataChunkSize 'get ' : 
+  Methods:
+    send(Byte[], Int32, Socket): PrivateScope, Public
+    receive(Byte[], Int32, Socket): PrivateScope, Public
+    disconnect(Socket): PrivateScope, Public
+    OpenSSLConnect(SecurityProviderProtocol, Socket, IPEndPoint): PrivateScope, Public
+    get_MaxDataChunkSize(): PrivateScope, Public, SpecialName
+    buildHTTPDigest(String, String, String, String, String, String, String, String, String, String, String): PrivateScope, Public, Static
+    {dtor}(): PrivateScope, Public
+Struct OpenSSL_Wrapper.ServerCertChainPolicyStatus: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_COMMON_NAME_MISMATCH = 51 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_APPLICATION_VERIFICATION = 50 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_KEYUSAGE_NO_CERTSIGN = 32 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_AKID_ISSUER_SERIAL_MISMATCH = 31 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_AKID_SKID_MISMATCH = 30 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_SUBJECT_ISSUER_MISMATCH = 29 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_CERT_REJECTED = 28 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_CERT_UNTRUSTED = 27 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_INVALID_PURPOSE = 26 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_PATH_LENGTH_EXCEEDED = 25 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_INVALID_CA = 24 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_CERT_REVOKED = 23 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_CERT_CHAIN_TOO_LONG = 22 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_UNABLE_TO_VERIFY_LEAF_SIGNATURE = 21 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_UNABLE_TO_GET_ISSUER_CERT_LOCALLY = 20 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_SELF_SIGNED_CERT_IN_CHAIN = 19 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_DEPTH_ZERO_SELF_SIGNED_CERT = 18 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_OUT_OF_MEM = 17 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_ERROR_IN_CRL_NEXT_UPDATE_FIELD = 16 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_ERROR_IN_CRL_LAST_UPDATE_FIELD = 15 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_ERROR_IN_CERT_NOT_AFTER_FIELD = 14 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_ERROR_IN_CERT_NOT_BEFORE_FIELD = 13 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_CRL_HAS_EXPIRED = 12 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_CRL_NOT_YET_VALID = 11 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_CERT_HAS_EXPIRED = 10 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_CERT_NOT_YET_VALID = 9 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_CRL_SIGNATURE_FAILURE = 8 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_CERT_SIGNATURE_FAILURE = 7 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_UNABLE_TO_DECODE_ISSUER_PUBLIC_KEY = 6 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_UNABLE_TO_DECRYPT_CRL_SIGNATURE = 5 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_UNABLE_TO_DECRYPT_CERT_SIGNATURE = 4 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_UNABLE_TO_GET_CRL = 3 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus X509ERR_UNABLE_TO_GET_ISSUER_CERT = 2 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.ServerCertChainPolicyStatus CERT_OK = 0 : Public, Static, Literal, HasDefault
+Struct OpenSSL_Wrapper.SecurityProviderProtocol: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    OpenSSL_Wrapper.SecurityProviderProtocol PROT_OTHER = 5 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.SecurityProviderProtocol PROT_NO_SSL = 4 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.SecurityProviderProtocol PROT_SSL23 = 3 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.SecurityProviderProtocol PROT_SSL2 = 2 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.SecurityProviderProtocol PROT_TLS1 = 1 : Public, Static, Literal, HasDefault
+    OpenSSL_Wrapper.SecurityProviderProtocol PROT_SSL3 = 0 : Public, Static, Literal, HasDefault

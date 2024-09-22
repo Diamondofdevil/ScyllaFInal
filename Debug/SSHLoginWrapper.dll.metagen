@@ -1,0 +1,28 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly SSHLoginWrapper, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class SSH2Wrapper.SSHLoginWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Initialize(): PrivateScope, Public, HideBySig
+    IsStarted(): PrivateScope, Public, HideBySig
+    ListAuthTypes(): PrivateScope, Public, HideBySig
+    Connect(String, String, Int32): PrivateScope, Public, HideBySig
+    Login(String): PrivateScope, Public, HideBySig
+    Reset(): PrivateScope, Public, HideBySig
+    SetHMACAlg(UInt32 IsLong): PrivateScope, Public, HideBySig
+    SetCipherAlg(UInt32 IsLong): PrivateScope, Public, HideBySig
+    SetPubKeyAlg(UInt32 IsLong): PrivateScope, Public, HideBySig
+    SetKeyExchAlg(UInt32 IsLong): PrivateScope, Public, HideBySig
+    SetCompressionAlg(UInt32 IsLong): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig

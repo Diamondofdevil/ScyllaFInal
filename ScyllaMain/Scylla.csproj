@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C7F2840-77B0-4429-B03B-541479FA29E9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Scylla</RootNamespace>
+    <AssemblyName>Scylla</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>C:\Users\flacman\Desktop\Scylla\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E714963430ED72C05D12B6579D8D716C89C586EC</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Scylla_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Bruter.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Bruter.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>none</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <WarningLevel>0</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IBM.Data.DB2, Version=9.7.4.4, Culture=neutral, PublicKeyToken=7c307b91aa13d208, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\DB2\IBM.Data.DB2.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\libs\mysql\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\libs\Postgres\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\ODA\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="SSHLoginWrapper, Version=1.0.4586.32648, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\SSHLoginWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\sqlce\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutScylla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutScylla.Designer.cs">
+      <DependentUpon>AboutScylla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NmapWrapper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NmapWrapper.Designer.cs">
+      <DependentUpon>NmapWrapper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\DNSCacheSnoopPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\DNSCacheSnoopPanel.Designer.cs">
+      <DependentUpon>DNSCacheSnoopPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\LDAPOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\LDAPOptionPanel.Designer.cs">
+      <DependentUpon>LDAPOptionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\DB2OptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\DB2OptionPanel.Designer.cs">
+      <DependentUpon>DB2OptionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\HTTPFormRequestBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\HTTPFormRequestBuilder.Designer.cs">
+      <DependentUpon>HTTPFormRequestBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\HTTPHeaderBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\HTTPHeaderBuilder.Designer.cs">
+      <DependentUpon>HTTPHeaderBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\HTTPOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\HTTPOptionPanel.Designer.cs">
+      <DependentUpon>HTTPOptionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\OneClickOwnageConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\OneClickOwnageConfig.Designer.cs">
+      <DependentUpon>OneClickOwnageConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\PostgresOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\PostgresOptionPanel.Designer.cs">
+      <DependentUpon>PostgresOptionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\WebProxy.cs" />
+    <Compile Include="OnlineModules\HTTPHelper.cs" />
+    <Compile Include="OnlineModules\ModuleDB2.cs" />
+    <Compile Include="OnlineModules\ModuleDNSCacheSnoop.cs" />
+    <Compile Include="OnlineModules\ModuleHTTPBasic.cs" />
+    <Compile Include="OnlineModules\ModuleHTTPDir.cs" />
+    <Compile Include="OnlineModules\ModuleHTTPForm.cs" />
+    <Compile Include="OnlineModules\ModuleIBMDB2DAS.cs" />
+    <Compile Include="OnlineModules\ModuleLDAP.cs" />
+    <Compile Include="OnlineModules\ModulePostgres.cs" />
+    <Compile Include="OnlineModules\ModuleRSH.cs" />
+    <Compile Include="SASL\AuthPlain.cs" />
+    <Compile Include="SASL\DigestMD5SASL.cs" />
+    <Compile Include="SASL\HMACs.cs" />
+    <Compile Include="SASL\includes.cs" />
+    <Compile Include="SASL\NTLMHash.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="SASL\SASLMechanism.cs" />
+    <Compile Include="ScyllaGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScyllaGUI.Designer.cs">
+      <DependentUpon>ScyllaGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputDialog.Designer.cs">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListAdvancedOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListAdvancedOptions.Designer.cs">
+      <DependentUpon>ListAdvancedOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\CommandExec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OnlineModules\FastMSSQL.cs" />
+    <Compile Include="OnlineModules\ModuleOracle.cs" />
+    <Compile Include="OnlineModuleGUI\OracleOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\OracleOptionPanel.Designer.cs">
+      <DependentUpon>OracleOptionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\ScyllaShell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\ScyllaShell.Designer.cs">
+      <DependentUpon>ScyllaShell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\IMAPOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\IMAPOptionPanel.Designer.cs">
+      <DependentUpon>IMAPOptionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModules\ModuleIMAP.cs" />
+    <Compile Include="OnlineModuleGUI\TerminalOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\TerminalOptionPanel.Designer.cs">
+      <DependentUpon>TerminalOptionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModules\FastSMB.cs" />
+    <Compile Include="OnlineModules\ModuleMSSQL.cs" />
+    <Compile Include="OnlineModuleGUI\MSSQLOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\MSSQLOptionPanel.Designer.cs">
+      <DependentUpon>MSSQLOptionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\POP3OptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\POP3OptionPanel.Designer.cs">
+      <DependentUpon>POP3OptionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\FTPOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\FTPOptionPanel.Designer.cs">
+      <DependentUpon>FTPOptionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IOnlineModule.cs" />
+    <Compile Include="OnlineModuleGUI\IModuleOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OnlineModules\ModulePOP3.cs" />
+    <Compile Include="OnlineModules\ModuleTELNET.cs" />
+    <Compile Include="OnlineModuleGUI\MySQLOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\MySQLOptionPanel.Designer.cs">
+      <DependentUpon>MySQLOptionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModules\ModuleMySQUAL.cs" />
+    <Compile Include="OnlineModules\SMB.cs" />
+    <Compile Include="OnlineModuleGUI\SMBOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\SMBOptionPanel.Designer.cs">
+      <DependentUpon>SMBOptionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\SMTPOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OnlineModuleGUI\SMTPOptionPanel.Designer.cs">
+      <DependentUpon>SMTPOptionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineModules\ModuloSSH.cs" />
+    <Compile Include="OnlineModules\ModuleTNSLstnr.cs" />
+    <Compile Include="SelecctionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelecctionDialog.Designer.cs">
+      <DependentUpon>SelecctionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThreadInformation.cs" />
+    <Compile Include="PasswordsLoader.cs" />
+    <Compile Include="Cipher.cs" />
+    <Compile Include="Module.cs" />
+    <Compile Include="OfflineModule.cs" />
+    <Compile Include="OnlineModule.cs" />
+    <Compile Include="OnlineModules\ModuleFTP.cs" />
+    <Compile Include="OnlineModules\ModuleSMTP.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutScylla.resx">
+      <DependentUpon>AboutScylla.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NmapWrapper.resx">
+      <DependentUpon>NmapWrapper.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\CommandExec.resx">
+      <DependentUpon>CommandExec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\DNSCacheSnoopPanel.resx">
+      <DependentUpon>DNSCacheSnoopPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\LDAPOptionPanel.resx">
+      <DependentUpon>LDAPOptionPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\DB2OptionPanel.resx">
+      <DependentUpon>DB2OptionPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\HTTPFormRequestBuilder.resx">
+      <DependentUpon>HTTPFormRequestBuilder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\HTTPHeaderBuilder.resx">
+      <DependentUpon>HTTPHeaderBuilder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\HTTPOptionPanel.resx">
+      <DependentUpon>HTTPOptionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\OneClickOwnageConfig.resx">
+      <DependentUpon>OneClickOwnageConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\PostgresOptionPanel.resx">
+      <DependentUpon>PostgresOptionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScyllaGUI.resx">
+      <DependentUpon>ScyllaGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputDialog.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListAdvancedOptions.resx">
+      <DependentUpon>ListAdvancedOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\OracleOptionPanel.resx">
+      <DependentUpon>OracleOptionPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\ScyllaShell.resx">
+      <DependentUpon>ScyllaShell.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\IMAPOptionPanel.resx">
+      <DependentUpon>IMAPOptionPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\TerminalOptionPanel.resx">
+      <DependentUpon>TerminalOptionPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\MSSQLOptionPanel.resx">
+      <DependentUpon>MSSQLOptionPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\POP3OptionPanel.resx">
+      <DependentUpon>POP3OptionPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\FTPOptionPanel.resx">
+      <DependentUpon>FTPOptionPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\MySQLOptionPanel.resx">
+      <DependentUpon>MySQLOptionPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\SMBOptionPanel.resx">
+      <DependentUpon>SMBOptionPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineModuleGUI\SMTPOptionPanel.resx">
+      <DependentUpon>SMTPOptionPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SelecctionDialog.resx">
+      <DependentUpon>SelecctionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Scylla_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bdev.Net.Dns\Bdev.Net.Dns.csproj">
+      <Project>{6d765924-73e9-49ae-8a97-da24958a540c}</Project>
+      <Name>Bdev.Net.Dns</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DatabaseBrowser\DatabaseBrowser.csproj">
+      <Project>{1f870ca3-2571-4901-bcbf-207c7c8f8223}</Project>
+      <Name>DatabaseBrowser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBManagement\DBManagement.csproj">
+      <Project>{07869C3C-1020-4F92-B5BE-8C755AE930A6}</Project>
+      <Name>DBManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HackSMB\HackSMB.vcxproj">
+      <Project>{2c58fc64-7d03-46aa-9dc8-797d6838a022}</Project>
+      <Name>HackSMB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenSSL_Wrapper\OpenSSL_Wrapper.vcxproj">
+      <Project>{6411a821-c7f4-4da5-a06d-47ca868ad907}</Project>
+      <Name>OpenSSL_Wrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReportViewer\ReportViewer.csproj">
+      <Project>{24B694F8-E645-4352-ACDC-CB5A5104E52A}</Project>
+      <Name>ReportViewer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scyllaicoreal.png" />
+    <None Include="Resources\scylla.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
